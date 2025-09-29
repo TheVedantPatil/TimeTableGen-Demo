@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimetableGen | AI-Powered NEP 2020 Scheduler</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <h2 class="logo"><i class='bx bx-calendar'></i> TimetableGen
+                <span></span>
+            </h2>
+            <ul class="menu">
+                <li class="menu-item active"><a href="index.html"><i class='bx bx-home'></i> Dashboard</a></li>
+                <li class="menu-item"><a href="timetable.html"><i class='bx bx-table'></i> Timetable</a></li>
+                <li class="menu-item"><a href="management.html"><i class='bx bx-cog'></i> Management</a></li>
+            </ul>
+            <div class="user-box">
+                <div class="avatar" id="user-avatar">V</div>
+                <div>
+                    <p class="username" id="sidebar-username">Vedant</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Dashboard Page -->
+            <div id="dashboard-page" class="page active">
+                <h1> AI-Based Time Table Generator </h1>
+                <p class="welcome">Welcome back, to Time Table Scheduler!</p>
+
+                <div class="stats">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class='bx bx-book-open'></i>
+                        </div>
+                        <h2 id="total-courses">0</h2>
+                        <p>Total Courses</p><span class="positive" id="courses-change">+0%</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class='bx bx-user-check'></i>
+                        </div>
+                        <h2 id="total-faculty">0</h2>
+                        <p>Faculty Members</p><span class="positive" id="faculty-change">+0%</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class='bx bx-building'></i>
+                        </div>
+                        <h2 id="total-rooms">0</h2>
+                        <p>Classrooms</p>
+                    </div>
+                </div>
+
+                <!-- <h2>Quick Actions</h2> -->
+                <div class="quick-actions">
+                    <div class="action">
+                        <h3><i class='bx bx-upload'></i> Upload Department JSON</h3>
+                        <p>Upload department, courses, faculty, rooms, and slots as a JSON file.</p>
+                        <form id="uploadForm">
+                            <div class="upload-area" id="uploadArea">
+                                <i class='bx bx-cloud-upload'></i>
+                                <p>Click to select JSON file or drag & drop</p>
+                                <input type="file" id="csvFile" accept=".json" style="display: none;">
+                            </div>
+                            <button type="submit" class="btn upload-btn">Upload JSON</button>
+                        </form>
+                        <p id="uploadStatus"></p>
+                    </div>
+                    <div id="unique"  class="action">
+                        <h3> Generate Timetable</h3>
+                        <button id="generateBtn" class="btn magic">Generate</button>
+                    </div>
+                    <!-- <div class="action">
+                        <h3><i class='bx bx-reset'></i> Database Management</h3>
+                        <button id="resetBtn" class="btn danger">Reset Database</button>
+                        <p class="reset-warning">This will delete ALL department data!</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Timetable moved to timetable.html; Management moved to management.html -->
+        </div>
+    </div>
+</body>
+
+</html>

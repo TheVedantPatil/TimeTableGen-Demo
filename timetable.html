@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable | TimetableGen</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <h2 class="logo"><i class='bx bx-calendar'></i> TimetableGen
+                <span></span>
+            </h2>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html"><i class='bx bx-home'></i> Dashboard</a></li>
+                <li class="menu-item active"><a href="timetable.html"><i class='bx bx-table'></i> Timetable</a></li>
+                <li class="menu-item"><a href="management.html"><i class='bx bx-cog'></i> Management</a></li>
+            </ul>
+            <div class="user-box">
+                <div class="avatar" id="user-avatar">V</div>
+                <div>
+                    <p class="username" id="sidebar-username">Vedant</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1>Generated Timetable</h1>
+
+            <div class="timetable-actions">
+                <select class="department-select">
+                    <option value="EXTC">Select Department</option>
+                </select>
+                <button class="btn magic"><i class='bx bx-magic-wand'></i> Generate Timetable</button>
+                <button class="btn"><i class='bx bx-download'></i> Download Excel</button>
+                <button class="btn"><i class='bx bx-file'></i> Download PDF</button>
+            </div>
+
+            <div id="timetableContainer"></div>
+        </div>
+    </div>
+</body>
+
+</html>
